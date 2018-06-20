@@ -57,7 +57,7 @@ function createMap() {
   map = L.map('map').setView([29.75, -95.35], 12);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
-    minZoom: 1,
+    minZoom: 10,
     attribution: null,
     "noWrap": false,
     subdomains: "abc"
