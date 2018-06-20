@@ -92,5 +92,5 @@ function updateMap() {
 
 function dataURL() {
   let date = timestamp.utc().format('YYYY-MM-DD');
-  return `/data/${date}/${timestamp.utc().format()}/houston.geojson`
+  return `data/${date}/${timestamp.utc().format()}/houston.geojson`
 }
