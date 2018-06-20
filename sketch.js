@@ -1,4 +1,4 @@
-var navDiv;
+var navDiv, navHeight;
 var floodData, floodLayer;
 var mapDiv, map;
 var timeSlider, timeButton;;
@@ -12,7 +12,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  navHeight = 50;
+  createCanvas(windowWidth, windowHeight - navHeight);
   createNav();
   createMap();
   drawRoads(floodData);
@@ -30,7 +31,7 @@ function createNav() {
   navDiv = createDiv();
   navDiv.id('navbar');
   navDiv.style("position", "absolute");
-  navDiv.style("height", "50px");
+  navDiv.style("height", `${navHeight}px`);
   navDiv.style("width", "100%");
   navDiv.style("background-color", "white");
   navDiv.style("box-shadow", "0px 0px 10px 0px rgba(0, 0, 0, .5)");
@@ -51,7 +52,7 @@ function createMap() {
   mapDiv = createDiv();
   mapDiv.id('map');
   mapDiv.style("position", "absolute");
-  mapDiv.style("top", "50px");
+  mapDiv.style("top", `${navHeight}px`);
   mapDiv.style("bottom", "0px");
   mapDiv.style("width", "100%");
   map = L.map('map').setView([29.75, -95.35], 12);
